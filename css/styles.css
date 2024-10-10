@@ -8,13 +8,6 @@ body {
     display: flex;
 }
 
-header {
-    background: #296d5f;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
 nav {
     background: #296d5f;
     padding: 20px;
@@ -40,12 +33,12 @@ nav a:hover {
 }
 
 .main-content {
-    margin-left: 220px; /* Leave space for the sidebar */
+    margin-left: 220px; /* Leaves space for the sidebar */
     padding: 20px;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the content area covers full height */
+    flex-direction: column; /* Allows content and footer to stack vertically */
+    min-height: 100vh; /* Ensures it takes the full height of the viewport */
 }
 
 .container {
@@ -53,31 +46,17 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    flex-grow: 1; /* Ensures the content takes up available space */
+    flex-grow: 1; /* Takes up available space */
 }
 
 h1, h2 {
     color: #296d5f;
 }
 
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-a {
-    color: #296d5f;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 footer {
-    text-align: center;
-    padding: 10px;
     background: #296d5f;
     color: #fff;
-    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
