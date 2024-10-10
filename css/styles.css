@@ -72,4 +72,8 @@ footer {
     background: #296d5f;
     color: #fff;
     margin-top: 20px;
+    position: relative;
+    width: 100%;
+    clear: both; 
 }
+
