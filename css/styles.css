@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row; /* Ensure the navigation stays on the left */
 }
 
 header {
@@ -24,8 +23,6 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column; /* Ensure links are vertically aligned */
 }
 
 nav a {
@@ -42,14 +39,21 @@ nav a:hover {
     background: #2b8a74;
 }
 
-.container {
+.main-content {
+    margin-left: 220px; /* Leave space for the sidebar */
     padding: 20px;
-    margin-left: 220px; /* Account for the width of the sidebar */
-    max-width: 800px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the content area covers full height */
+}
+
+.container {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Ensure it takes available space */
+    padding: 20px;
+    flex-grow: 1; /* Ensures the content takes up available space */
 }
 
 h1, h2 {
@@ -76,10 +80,4 @@ footer {
     background: #296d5f;
     color: #fff;
     margin-top: 20px;
-    width: calc(100% - 220px); /* Adjust for sidebar */
-    margin-left: 220px; /* Align with the container */
-    position: relative;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
 }
